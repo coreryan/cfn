@@ -1,0 +1,19 @@
+{
+    "AWSTemplateFormatVersion" : "2010-09-09",
+    "Resources" : {
+    "OracleOptionGroup": {
+        "Type": "AWS::RDS::OptionGroup",
+        "Properties": {
+            "EngineName": "oracle-ee",
+            "MajorEngineVersion": "12.1",
+            "OptionGroupDescription": "A test option group",
+            "OptionConfigurations":[
+            {
+                "OptionName": "Timezone",
+                "OptionSettings": [{"Name": "TIME_ZONE", "Value": "Europe/Paris"}]
+            }
+            ]
+        }
+    }
+    }    
+}
