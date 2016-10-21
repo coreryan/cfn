@@ -1,0 +1,13 @@
+Description: "Master IAM Stack"
+Parameters:
+  ExamplePassword:
+    Type: String
+    Default: "1234abcd"
+Resources:
+  MyHandle:
+    Type: AWS::CloudFormation::WaitConditionHandle
+Outputs:
+  ExamplePassword:
+    Value: !Ref ExamplePassword
+    Export:
+      Name: ExamplePassword
